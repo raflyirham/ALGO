@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALGO | Elevate Your Algorithm and Data Structure Skill</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="assets/icon/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="flex flex-row justify-between align-center bg-primary">
+      <div class="flex flex-row justify-start align-center">
+        <h1 class="font-oswald font-400 text-green mr-30">
+          <a href="" #>ALGO</a>
+        </h1>
+        <nav>
+          <ul>
+            <li class="font-rubik font-400 text-white text-18 mr-30 active">
+              <a href="#">Home</a>
+            </li>
+            <li class="font-rubik font-400 text-white text-18 mr-30">
+              <a href="#">Problems</a>
+            </li>
+            <li class="font-rubik font-400 text-white text-18 mr-30">
+              <a href="#">Forum</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button id="dropdownMenu" onclick="handleDropdown()">=</button>
+      </div>
+      <div class="flex flex-row justify-end">
+        <button
+          class="mr-30 rounded bg-button-transparent border-line-primary font-rubik font-400 text-16 text-white"
+        >
+          Sign In
+        </button>
+        <button
+          class="rounded bg-button-primary font-rubik font-400 text-16 text-white"
+        >
+          Sign Up
+        </button>
+      </div>
+    </header>
+
+    <main class="flex flex-column">
+      <div id="menu" style="display: none">
+        <nav>
+          <ul>
+            <li class="font-rubik font-400 text-white text-18 mr-30 active">
+              <a href="#">Home</a>
+            </li>
+            <li class="font-rubik font-400 text-white text-18 mr-30">
+              <a href="#">Problems</a>
+            </li>
+            <li class="font-rubik font-400 text-white text-18 mr-30">
+              <a href="#">Forum</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section id="welcome" class="flex flex-row justify-between align-center">
+        <div class="flex flex-column">
+          <h2 class="font-rubik font-bold text-48 text-white mb-14">
+            Master Your Logic and Problem Solving Skill.
+          </h2>
+          <p class="font-rubik font-400 text-18 text-white">
+            Learn how to solve algorithm and data structure problems by
+            understanding the basic concept, pattern and practice. Discuss with
+            other users from around the world.
+          </p>
+          <button
+            class="rounded bg-button-primary font-rubik font-400 text-16 text-white mb-14"
+          >
+            Start Learning
+          </button>
+          <p class="font-rubik font-400 text-14 text-white">
+            Supported Languages: C, C++, Python, Java, JavaScript, TypeScript,
+            PHP.
+          </p>
+        </div>
+        <div id="welcomeImage" class="flex rounded"></div>
+      </section>
+
+      <section
+        id="testimonial"
+        class="flex flex-column justify-center align-center"
+      >
+        <h2 class="font-rubik font-bold text-48 text-white mb-20 mt-20">
+          Successful Stories from Our Users
+        </h2>
+
+        <div
+          id="testimonialList"
+          class="flex flex-column justify-center align-center"
+        ></div>
+
+        <button
+          id="btnSeeMore"
+          class="rounded bg-button-primary font-rubik font-400 text-16 text-white"
+          onclick="handleSeeMore()"
+        >
+          See More
+        </button>
+
+        <aside class="flex flex-column justify-center align-center">
+          <h3 class="font-rubik font-bold text-18 text-white mt-20">
+            You Can Be Here, Too!
+          </h3>
+
+          <div class="cardContainer">
+            <div
+              class="flex flex-row justify-start testimonialCard rounded bg-primary border-line-primary"
+            >
+              <img
+                src="assets/img/avatar.png"
+                alt="Blank Avatar"
+                class="rounded"
+              />
+              <div class="flex flex-column">
+                <h3 class="font-rubik font-bold text-24 text-green mb-14">
+                  You
+                </h3>
+                <p class="font-rubik font-400 text-16 text-white">
+                  Your awesome journey and successful stories goes here!
+                </p>
+
+                <button
+                  id="btnStartJourney"
+                  class="rounded bg-button-primary font-rubik font-400 text-16 text-white"
+                >
+                  Start Your Journey
+                </button>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="topics" class="flex flex-column justify-center align-center">
+        <h2 class="font-rubik font-bold text-48 text-white mb-20 mt-20">
+          What You'll Learn?
+        </h2>
+
+        <div id="topicContainer" class="flex flex-row justify-center">
+          <button class="bg-button-primary" onclick="btnTopicHandle('prev')">
+            <p class="font-rubik font-bold text-32 text-white"><</p>
+          </button>
+          <div class="topicCard">
+            <img src="assets/img/topics/array.png" alt="Array" />
+            <h3 class="font-rubik font-bold text-16 text-white">Array</h3>
+            <p class="font-rubik font-400 text-14 text-white">
+              An array allows you to store a collection of elements of the same
+              data type under a single name.
+            </p>
+          </div>
+
+          <div class="topicCard">
+            <img src="assets/img/topics/linked-list.png" alt="Linked List" />
+            <h3 class="font-rubik font-bold text-16 text-white">Linked List</h3>
+            <p class="font-rubik font-400 text-14 text-white">
+              A linked list is a sequence of nodes, where each node contains two
+              main components: data and reference.
+            </p>
+          </div>
+
+          <div class="topicCard">
+            <img src="assets/img/topics/binary-tree.png" alt="Binary Tree" />
+            <h3 class="font-rubik font-bold text-16 text-white">Binary Tree</h3>
+            <p class="font-rubik font-400 text-14 text-white">
+              A binary tree is composed of nodes, where each node has a maximum
+              of two children nodes.
+            </p>
+          </div>
+
+          <button class="bg-button-primary" onclick="btnTopicHandle('next')">
+            <p class="font-rubik font-bold text-32 text-white">></p>
+          </button>
+        </div>
+      </section>
+
+      <section id="faq" class="flex flex-column justify-center align-center">
+        <h2 class="font-rubik font-bold text-48 text-white mb-20 mt-20">
+          Frequently Asked Questions
+        </h2>
+
+        <div id="questionContainer">
+          <!-- Question Card Skeleton -->
+          <!-- <button class="questionCard">
+            <div class="flex flex-row justify-between rounded">
+              <article>
+                <h3 class="font-rubik font-bold text-24 text-white">
+                </h3>
+              </article>
+
+              <p class="font-rubik font-bold text-24 text-white">></p>
+            </div>
+
+            <p class="font-rubik font-bold text-24 text-white"></p>
+          </button> -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="flex flex-row justify-between align-center">
+      <div class="flex flex-row justify-center align-center">
+        <p class="font-oswald font-400 text-16 text-green mr-30">ALGO |</p>
+
+        <nav>
+          <ul>
+            <li class="font-rubik font-400 text-white text-14 mr-30">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="font-rubik font-400 text-white text-14 mr-30">
+              <a href="#">Terms and Conditions</a>
+            </li>
+            <li class="font-rubik font-400 text-white text-14 mr-30">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <p class="font-rubik font-400 text-12 text-white">
+          © 2023 ALGO. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
